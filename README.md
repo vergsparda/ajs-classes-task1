@@ -1,0 +1,1 @@
+status [![Build status](https://ci.appveyor.com/api/projects/status/w5igjgtev7gsr5qi?svg=true)](https://ci.appveyor.com/project/vergsparda/ajs-classes-task1)
