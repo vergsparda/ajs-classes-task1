@@ -1,15 +1,15 @@
 import Character from '../character';
-import Undead from '../Undead';
+import Undead from '../undead';
 
-const recieved = new Character('Smith', 'Undead', 25, 25);
+const recieved = new Character('Smith', 'Undead', 30, 30);
 
 test('create Character', () => {
   expect(recieved).toEqual({
     name: 'Smith',
     type: 'Undead',
     level: 1,
-    attack: 25,
-    defense: 25,
+    attack: 30,
+    defense: 30,
     health: 100,
   });
 
@@ -17,8 +17,8 @@ test('create Character', () => {
     name: 'Smith',
     type: 'Undead',
     level: 1,
-    attack: 25,
-    defense: 25,
+    attack: 30,
+    defense: 30,
     health: 100,
   });
 });
@@ -30,8 +30,8 @@ test('levelUp', () => {
     name: 'Smith',
     type: 'Undead',
     level: 2,
-    attack: 30,
-    defense: 30,
+    attack: 36,
+    defense: 36,
     health: 100,
   });
 
@@ -39,10 +39,30 @@ test('levelUp', () => {
     name: 'Smith',
     type: 'Undead',
     level: 2,
-    attack: 30,
-    defense: 30,
+    attack: 36,
+    defense: 36,
     health: 100,
   });
+});
+
+test ('damage check', () => {
+  const result = recieved.damage(20);
+  expect(result).toEqual({
+    name: 'Smith',
+    type: 'Undead',
+    level: 2,
+    attack: 36,
+    defense: 36,
+    health: 87.2,
+  });
+  expect(result).not.toBe({
+    name: 'Smith',
+    type: 'Undead',
+    level: 2,
+    attack: 36,
+    defense: 36,
+    health: 87.2,
+  })
 });
 
 test('wrong name check', () => {

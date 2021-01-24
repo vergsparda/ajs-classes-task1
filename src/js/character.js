@@ -34,7 +34,7 @@ export default class Character {
   }
 }
 
-const riki = new Character('riki', 'Bowerman', 10, 20);
+const riki = new Character('riki', 'Undead', 30, 30);
 console.log(riki);
 console.log(riki.levelUp());
-console.log(riki.damage(9));
+console.log(riki.damage(20));
